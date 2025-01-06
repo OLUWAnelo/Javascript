@@ -1,15 +1,9 @@
 pipeline {
   agent any
   stages {
-    stage('Checkout') {
+    stage('Test') {
       steps {
-        git(url: 'https://github.com/OLUWAnelo/Javascript/tree/main', branch: 'main')
-      }
-    }
-
-    stage('Log') {
-      steps {
-        sh 'ls -la'
+        echo 'test'
       }
     }
 
