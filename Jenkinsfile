@@ -13,5 +13,11 @@ pipeline {
       }
     }
 
+    stage('Frontend Test') {
+      steps {
+        sh 'cd javascript-front && npm i && npm run test:unit '
+      }
+    }
+
   }
 }
