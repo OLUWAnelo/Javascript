@@ -13,15 +13,9 @@ pipeline {
       }
     }
 
-    stage('Front end Test') {
+    stage('FrontEnd Test') {
       steps {
-        sh '''if [ -d "javascript" ]; then
-  cd javascript
-else
-  echo "Directory \'javascript\' does not exist."
-  exit 1
-fi
-'''
+        sh 'cd javascript-front && npm i && npm run test:unit '
       }
     }
 
