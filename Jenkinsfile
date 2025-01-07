@@ -1,21 +1,9 @@
 pipeline {
   agent any
   stages {
-    stage('Test') {
+    stage('Checkout') {
       steps {
-        echo 'test'
-      }
-    }
-
-    stage('Build') {
-      steps {
-        echo 'build'
-      }
-    }
-
-    stage('Deploy') {
-      steps {
-        echo 'deploy'
+        git(url: 'https://github.com/OLUWAnelo/Javascript', branch: 'main')
       }
     }
 
