@@ -19,5 +19,11 @@ pipeline {
       }
     }
 
+    stage('Build') {
+      steps {
+        sh 'docker build -f javascript-front/Dockerfile . '
+      }
+    }
+
   }
 }
